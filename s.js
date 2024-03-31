@@ -7,10 +7,10 @@ function logg (){
 //substituir a imagem
     if(html.classList.contains('luz')){
 //se tiver light mode, adiciona imagem
-    img.setAttribute("src", "/html/img/icone 3.jpg")
+    img.setAttribute("src", "/img/icone 3.jpg")
 }else {  
 // se nao tiver light mode manter a imagem nnormal
-    img.setAttribute("src", "/html/img/icone4.jpg")
+    img.setAttribute("src", "/img/icone4.jpg")
 }
 }
 function mudafoto(foto){
