@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+   list-style: none;
+   margin: 0px;
+   padding: 0px; 
+   box-sizing: border-box; 
+   font-family: 'inter',sans-serif;
+   color: var( --color);
+}
+:root{
+    --color:white;
+    --back: rgba(255, 255, 255, 0.05);
+    --border:rgba(255,255,255, 0.5);
+    --hover: rgba(0, 0, 0, 0.02);
+    --body: url(img/bg-mobile.jpg) no-repeat center/cover;
+    --botao: url(img/moon-stars.svg) no-repeat center;
+}
+.luz{
+    --color:black;
+    --back: rgba(0, 0, 0, 0.05);
+    --border:rgba(0,0,0, 0.5);
+    --hover: rgba(0, 0, 0, 0.02);
+    --body: url(img/bg-mobile-light.jpg) no-repeat center/cover;
+    --botao: url(img/sun.svg) no-repeat center;
+}
+body{
+    background: var(--body);
+    
+    height: 100vh;
+}
+#pai{
+    margin: 56px auto;
+   
+    width: 410px;
+    color: var(--color);
+}
+#main img{
+    display: block;
+    margin: 30px auto;
+    border-radius: 50%;
+    
+}
+#main p{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px ;
+    text-align: center;
+    margin-bottom: 16px;
+}
+span{
+    width: 64px;
+    height: 24px;
+    display: block;
+    background-color: var(--back);
+    border-radius: 9999px;
+    
+}
+#botao button{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    z-index: 1;
+    transform: translateY(-50%);
+    top: 50%;
+    background: var(--botao);
+    background-color: white;
+    position: absolute;
+    animation: escuro .4s;
+    
+}
+#botao button:hover{
+    outline: 8px solid var(--border);
+}
+#botao{
+    display: block;
+    margin: 4px auto;
+    position: relative;
+    width: 64px;
+    
+}
+.luz #botao button{
+    left: initial;
+    right: 0;
+    
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+ul li a{
+    font-weight: 700;
+    display: flex;
+    padding: 20px;
+    border: 1px solid var(--border);
+    justify-content: center;
+    color: var(--color);
+    text-decoration: none;
+    background-color: var(--back);
+    border-radius: 8px;
+}
+li a:hover{
+    background-color: var(--hover);
+}
+#social{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 24px;
+    padding: 24px;
+}
+#social a{
+    padding: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+#social a:hover{
+    background-color: var(--border);
+    
+}
+footer p{
+    text-align: center;
+    padding: 24px;
+}
+.luz #botao button{
+    animation: luz .4s forwards;
+}
+
+
+@keyframes luz{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+@keyframes escuro{
+    from{
+        left: 50%;
+        
+    }
+    to{
+        left: 0;
+    }
+}
+@media  (max-width: 700px) {
+    :root{
+        --body: url(/img/bg-desktop.jpg) center
+    }
+    .luz{
+        --body: url(/img/bg-desktop-light.jpg) center
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ul{ 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+ul li a{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(255,255,255, 0.05);
+    border: 1px solid rgba(255,255,255, 0.5);
+    backdrop-filter: blur (4px);
+    -webkit-backdrop-filter: blur(4px);
+    font-weight: bold;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+ul{ 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+ul li a:hover{
+    background: var(--surface-color-hover);
+    border: 1px solid var(--text-color);
+    
+}*/
