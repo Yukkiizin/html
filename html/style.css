@@ -16,7 +16,7 @@
 .luz{
     --color: black;
     --ground: white;
-    --ft:  ;
+    --ft:  rgba(220, 220, 220, 0.6) ;
     --span-border:rgba(0, 0, 0, .5)  ;
     --spanbg:  rgba(0, 0, 0, 0.2);
     --botao-img: url(/img/sun.svg) no-repeat center ;
@@ -140,6 +140,7 @@ article p,h2{
 .a{
     box-shadow: 2px 2px 8px var(--color);
     padding: 20px ;
+    margin-top: 14px;
 }
 .a img{
     border-radius: 50%;
