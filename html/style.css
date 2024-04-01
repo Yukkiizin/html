@@ -10,7 +10,7 @@
     --ft: rgba(12, 12, 12, 0.6) ;
     --span-border:rgba(255, 255, 255, .5)  ;
     --spanbg:  rgba(255, 255, 255, 0.2);
-    --botao-img: url(/img/moon-stars.svg) no-repeat center ;
+    --botao-img: url(img/moon-stars.svg) no-repeat center ;
     --box:rgba(255, 255, 255, 1);
 }
 .luz{
@@ -19,7 +19,7 @@
     --ft:  rgba(220, 220, 220, 0.6) ;
     --span-border:rgba(0, 0, 0, .5)  ;
     --spanbg:  rgba(0, 0, 0, 0.2);
-    --botao-img: url(/img/sun.svg) no-repeat center ;
+    --botao-img: url(img/sun.svg) no-repeat center ;
     --box:rgba(0, 0, 0, 1);
 }
 body{
