@@ -1,9 +1,29 @@
 
 *{
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color:white;
+    --ground: rgb(0,0,0);
+    --ft: rgba(12, 12, 12, 0.6) ;
+    --span-border:rgba(255, 255, 255, .5)  ;
+    --spanbg:  rgba(255, 255, 255, 0.2);
+    --botao-img: url(/img/moon-stars.svg) no-repeat center ;
+    --box:rgba(255, 255, 255, 1);
+}
+.luz{
+    --color: black;
+    --ground: white;
+    --ft:  ;
+    --span-border:rgba(0, 0, 0, .5)  ;
+    --spanbg:  rgba(0, 0, 0, 0.2);
+    --botao-img: url(/img/sun.svg) no-repeat center ;
+    --box:rgba(0, 0, 0, 1);
 }
 body{
-    background-color: black;
+    background-color: var(--ground);
 }
 header{
     display: flex;
@@ -16,6 +36,9 @@ header{
     justify-content: center;
     gap: 1rem;
 }
+ul li{
+    margin-top: 20px ;
+}
 li a{
     text-decoration: none;
     font-size: 22px;
@@ -23,31 +46,43 @@ li a{
     padding: 16px;
     color: rgba(0, 0, 255, 0.818);
 }
-.text{
-
+#botao{
+    display: block;
+    width: 64px;
     margin-left: 90%;
     height: 24px;
     position: relative;
+    padding: 0px;
 }
-button{
-    background: url(/img/sun.svg) no-repeat center ;
+#botao button{
+    background: var(--botao-img) ;
+    height: 32px;
     width: 32px;
     border: none;
     position: absolute;
-    height: 32px;
     border-radius: 50%;
     transform: translateY(-50%);
     top: 50%;
     z-index: 1;
     left: 0;
     background-color: white;
+    animation: back .4s;
+}
+#botao button:hover{
+    outline: 8px solid var(--spanbg);
+    cursor: pointer;
+}
+.luz #botao button{
+    left: initial;
+    right: 0;
+    animation: sing-up .4s;
 }
 span{
     display: block;
-    border:  1px solid rgba(255, 255, 255, .5) ;
-    background-color: rgba(255, 255, 255, 0.2);
+    border:  1px solid var(--span-border) ;
+    background-color: var(--spanbg);
     border-radius: 9999px;
-    width: 64px;
+    width: 62px;
     height: 24px;
     
 }
@@ -69,11 +104,11 @@ article .two{
     right: 2%;
     top: 200px;
     border-radius: 50%;
-    background-color: rgba(12, 12, 12, 0.6);
+    background-color: var(--ft);
 }
 article h1{
     text-align: center;
-    color: white;
+    color: var(--color);
     margin-bottom: 40px;
     font-size: 30px ;
     padding-top: 40px;
@@ -83,22 +118,27 @@ article p{
     margin-left: 50px;
     font-weight: 500;
     font-size: 20px;
+   
 }
+article .p{
+    text-align: center;
+}
+
 article p,h2{
-    color: white;
+    color: var(--color);
     
 }
 #bot{
     width: 700px;
-    box-shadow: 2px 2px 9px rgba(255, 255, 255, 1);
+    box-shadow: 2px 2px 9px var(--box);
 }
 #sombras{
     width: 600px;
     margin: 7rem auto;
-    color: white;
+    color: var(--color);
 }
 .a{
-    box-shadow: 2px 2px 8px white;
+    box-shadow: 2px 2px 8px var(--color);
     padding: 20px ;
 }
 .a img{
@@ -114,4 +154,22 @@ article p,h2{
     font-size: 20px;
     margin: 13px;
     text-align: center;
+}
+@keyframes sing-up{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+}
+@keyframes back {
+    from{
+        left: 50%;
+    }
+
+    to{
+        left: 0;
+    }
+    
 }
